@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-fixed-dim: #a5d0b9;
+  --color-on-secondary-fixed: #161f00;
+  --color-surface: #f9f9f8;
+  --color-surface-container-highest: #e1e3e2;
+  --color-outline: #717973;
+  --color-inverse-surface: #2e3131;
+  --color-outline-variant: #c1c8c2;
+  --color-on-primary-fixed: #002114;
+  --color-tertiary: #002d1c;
+  --color-on-background: #191c1c;
+  --color-on-error-container: #93000a;
+  --color-secondary-fixed: #d9eaa3;
+  --color-on-tertiary-fixed-variant: #0e5138;
+  --color-primary: #012d1d;
+  --color-tertiary-fixed-dim: #95d4b3;
+  --color-surface-bright: #f9f9f8;
+  --color-on-secondary: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f4f3;
+  --color-tertiary-fixed: #b1f0ce;
+  --color-primary-fixed: #c1ecd4;
+  --color-on-tertiary-fixed: #002114;
+  --color-on-surface-variant: #414844;
+  --color-on-primary: #ffffff;
+  --color-surface-container-high: #e7e8e7;
+  --color-background: #f9f9f8;
+  --color-tertiary-container: #00452e;
+  --color-on-primary-container: #86af99;
+  --color-surface-dim: #d9dad9;
+  --color-error-container: #ffdad6;
+  --color-on-secondary-fixed-variant: #3e4c16;
+  --color-on-error: #ffffff;
+  --color-surface-variant: #e1e3e2;
+  --color-on-secondary-container: #5a682f;
+  --color-surface-container: #edeeed;
+  --color-error: #ba1a1a;
+  --color-surface-tint: #3f6653;
+  --color-secondary: #56642b;
+  --color-primary-container: #1b4332;
+  --color-inverse-primary: #a5d0b9;
+  --color-inverse-on-surface: #f0f1f0;
+  --color-on-primary-fixed-variant: #274e3d;
+  --color-on-tertiary: #ffffff;
+  --color-on-surface: #191c1c;
+  --color-secondary-container: #d6e7a1;
+  --color-on-tertiary-container: #75b393;
+  --color-secondary-fixed-dim: #bdce89;
+  
+  /* Category Colors */
+  --color-cat-food: #ef4444;
+  --color-cat-modas: #f97316;
+  --color-cat-moveis: #eab308;
+  --color-cat-tech: #3b82f6;
+  --color-cat-auto: #a855f7;
+
+  /* Custom Spacing */
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+
+  /* Custom Border Radii */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* Custom Fonts */
+  --font-manrope: var(--font-manrope), sans-serif;
+  --font-hanken-grotesk: var(--font-hanken-grotesk), sans-serif;
+}
+
+body {
+  font-family: var(--font-hanken-grotesk);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.font-manrope {
+  font-family: var(--font-manrope);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.exhibitor-card:hover {
+  box-shadow: 0 10px 30px rgba(27, 67, 50, 0.08);
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bingo-gradient {
+  background: linear-gradient(135deg, #012d1d 0%, #1b4332 100%);
+}
+
+/* Custom Text Utility classes that mimic the original config */
+@utility text-label-sm {
+  font-size: 13px;
+  line-height: 1.0;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+@utility text-body-md {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@utility text-display-lg {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+@utility text-title-md {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+@utility text-headline-lg-mobile {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@utility text-headline-lg {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+@utility text-body-lg {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@utility font-label-sm { font-family: var(--font-hanken-grotesk); }
+@utility font-body-md { font-family: var(--font-hanken-grotesk); }
+@utility font-display-lg { font-family: var(--font-manrope); }
+@utility font-title-md { font-family: var(--font-manrope); }
+@utility font-headline-lg-mobile { font-family: var(--font-manrope); }
+@utility font-headline-lg { font-family: var(--font-manrope); }
+@utility font-body-lg { font-family: var(--font-hanken-grotesk); }

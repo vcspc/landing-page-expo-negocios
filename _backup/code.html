@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expo Negócios | Conectando Ideias e Oportunidades</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#a5d0b9",
+                        "on-secondary-fixed": "#161f00",
+                        "surface": "#f9f9f8",
+                        "surface-container-highest": "#e1e3e2",
+                        "outline": "#717973",
+                        "inverse-surface": "#2e3131",
+                        "outline-variant": "#c1c8c2",
+                        "on-primary-fixed": "#002114",
+                        "tertiary": "#002d1c",
+                        "on-background": "#191c1c",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d9eaa3",
+                        "on-tertiary-fixed-variant": "#0e5138",
+                        "primary": "#012d1d",
+                        "tertiary-fixed-dim": "#95d4b3",
+                        "surface-bright": "#f9f9f8",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f4f3",
+                        "tertiary-fixed": "#b1f0ce",
+                        "primary-fixed": "#c1ecd4",
+                        "on-tertiary-fixed": "#002114",
+                        "on-surface-variant": "#414844",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e7e8e7",
+                        "background": "#f9f9f8",
+                        "tertiary-container": "#00452e",
+                        "on-primary-container": "#86af99",
+                        "surface-dim": "#d9dad9",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#3e4c16",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e1e3e2",
+                        "on-secondary-container": "#5a682f",
+                        "surface-container": "#edeeed",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#3f6653",
+                        "secondary": "#56642b",
+                        "primary-container": "#1b4332",
+                        "inverse-primary": "#a5d0b9",
+                        "inverse-on-surface": "#f0f1f0",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1c",
+                        "secondary-container": "#d6e7a1",
+                        "on-tertiary-container": "#75b393",
+                        "secondary-fixed-dim": "#bdce89",
+                        "cat-food": "#ef4444",
+                        "cat-modas": "#f97316",
+                        "cat-moveis": "#eab308",
+                        "cat-tech": "#3b82f6",
+                        "cat-auto": "#a855f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["Manrope"],
+                        "title-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["13px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .exhibitor-card:hover {
+            box-shadow: 0 10px 30px rgba(27, 67, 50, 0.08);
+            transform: translateY(-4px);
+        }
+        .btn-primary {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bingo-gradient {
+            background: linear-gradient(135deg, #012d1d 0%, #1b4332 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar Component -->
+<header class="w-full top-0 sticky z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/15">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-4">
+<img alt="Expo Negócios Logo" class="h-10 md:h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArBRtvG9f7kJI4HJV3zPbh1ZsbfgihAKGqn0vhzcMMspxqTIQHjqPxGVdZdD1n-OKQYSl0GroH0T2xO7AWfLVgqsR2Fw8_-dzVaZ8ifgvFjuBxp2N2XQ7UVRazqcvz_GplherSaDZd1idtG-T7ZuOu4WyVT3tEU3RegfnilSJDOVVhWJX8fcPMP4k9_AUNZvwd9dJP6ttR0KgotCKz2eixKS9-9TduwRwHi13JrCi5WB97yvST8VZRiuoPGBGwlygMZw"/>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-title-md text-title-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200" href="#exhibitors">Expositores</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#details">Programação</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#bingo">Prêmios</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#location">Localização</a>
+</nav>
+<div class="flex items-center gap-4 md:gap-6">
+<button class="hidden md:block btn-primary bg-primary text-on-primary px-8 py-3 font-manrope font-bold text-body-md rounded-lg hover:bg-primary-container transition-all">
+                Participar
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-12 pb-24 md:pt-32 md:pb-48 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block mb-6 px-4 py-1.5 bg-secondary-container text-on-secondary-container font-manrope font-bold text-label-sm uppercase tracking-widest rounded-full">
+                    Eco-Corporate Modernism 2024
+                </span>
+<h1 class="font-display-lg text-[40px] md:text-display-lg lg:text-[64px] text-primary mb-6 leading-tight">
+                    Expo Negócios
+                </h1>
+<p class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface-variant mb-8 md:mb-10 leading-relaxed">
+                    A Expo Negócios é uma vitrine pulsante de inovação e empreendedorismo local.
+                </p>
+<div class="space-y-6 mb-10 md:mb-12 max-w-2xl">
+<p class="font-body-md md:font-body-lg text-outline">
+                        Nosso Propósito: Fomentar o crescimento das empresas locais, promovendo um ambiente de networking, troca de conhecimentos e geração de novos negócios.
+                    </p>
+<p class="font-body-md md:font-body-lg text-outline">
+                        É um evento que reúne diversos setores da economia, proporcionando visibilidade e oportunidades estratégicas para empreendedores e investidores.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="btn-primary bg-primary text-on-primary px-8 md:px-10 py-4 md:py-5 font-manrope font-bold text-title-md rounded-xl inline-flex items-center justify-center gap-2" href="#exhibitors">
+                        Ver Expositores
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-primary text-primary px-8 md:px-10 py-4 md:py-5 font-manrope font-bold text-title-md rounded-xl inline-flex items-center justify-center hover:bg-primary/5 transition-all" href="#details">
+                        Horários e Local
+                    </a>
+</div>
+</div>
+</div>
+<!-- Abstract Background Element -->
+<div class="absolute top-0 right-0 w-1/2 h-full hidden lg:block -z-0">
+<div class="w-full h-full opacity-10" style="background-image: radial-gradient(circle at 70% 30%, #56642b 0%, transparent 70%);"></div>
+<div class="absolute inset-0 bg-cover bg-center mix-blend-overlay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9eU93REJUHuGuJW5mca54sOZGWHM2cGXtd6XL3M1XJvt-DhM1NBUf1geBxD403i7W14lf-72_OFoUoC--i1w8Xd7-94X7vdmTg69VR5bRX6M7pJv5iJb1yqbX0hLaR2IQbCZ2TubKGASYpGAeDAP6TJgw8hAfBjMYf6cWaofJoY4LObAnjxESUH6MgHA63xs149nRISUTIz6-zKeaRIG62jKEpv3n0ydQ93Npo-yR8wBpMQJE4VKh')"></div>
+</div>
+</section>
+<!-- Event Details Section (New) -->
+<section class="py-16 bg-surface-container-low px-margin-mobile md:px-margin-desktop border-y border-outline-variant/10" id="details">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<h2 class="font-headline-lg text-primary mb-6">Horários de Funcionamento</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary p-3 bg-primary-fixed rounded-xl">calendar_today</span>
+<div>
+<h4 class="font-title-md text-on-surface font-bold">Datas</h4>
+<p class="text-on-surface-variant">11 e 12 de julho de 2024</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary p-3 bg-primary-fixed rounded-xl">schedule</span>
+<div>
+<h4 class="font-title-md text-on-surface font-bold">Horário</h4>
+<p class="text-on-surface-variant">Das 09h às 22h</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-3xl text-on-primary shadow-xl">
+<h3 class="font-manrope font-bold text-headline-lg-mobile mb-4">Ingresso Gratuito</h3>
+<p class="mb-6 opacity-90">Participe do maior encontro de negócios da região sem custos de entrada. Aproveite o networking e as oportunidades!</p>
+<button class="w-full py-4 bg-secondary-container text-on-secondary-container font-manrope font-bold rounded-xl hover:scale-[1.02] transition-transform">
+                        Garantir minha vaga
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bingo Section (New) -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop relative overflow-hidden" id="bingo">
+<div class="bingo-gradient absolute inset-0 -z-10"></div>
+<div class="max-w-container-max mx-auto text-center">
+<span class="inline-block mb-4 px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-manrope font-bold text-label-sm uppercase rounded-full">Destaque do Evento</span>
+<h2 class="font-display-lg text-on-primary mb-8">Bingo Expo Negócios</h2>
+<p class="text-on-primary/80 max-w-2xl mx-auto mb-12 font-body-lg">
+                Não perca a chance de levar prêmios incríveis para casa! O sorteio acontecerá no encerramento do evento.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary-fixed text-[48px] mb-4">tv</span>
+<h4 class="text-on-primary font-bold text-title-md">Televisores 65"</h4>
+</div>
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary-fixed text-[48px] mb-4">two_wheeler</span>
+<h4 class="text-on-primary font-bold text-title-md">Moto Shineray</h4>
+</div>
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary-fixed text-[48px] mb-4">smartphone</span>
+<h4 class="text-on-primary font-bold text-title-md">Smartphone</h4>
+</div>
+</div>
+<div class="inline-flex items-center gap-4 bg-tertiary-container/50 px-8 py-4 rounded-full border border-tertiary-fixed/30">
+<span class="material-symbols-outlined text-tertiary-fixed">timer</span>
+<span class="text-on-primary font-manrope font-bold text-headline-lg-mobile">Domingo, 20:30h</span>
+</div>
+</div>
+</section>
+<!-- Exhibitors Section -->
+<section class="py-16 md:py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop" id="exhibitors">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6 md:gap-8">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Tendas Temáticas e Expositores</h2>
+<p class="font-body-md md:font-body-lg text-on-surface-variant max-w-2xl">
+                        Conecte-se com líderes de diversos setores organizados por categorias estratégicas.
+                    </p>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-2 rounded-xl border border-outline-variant/10 shadow-sm">
+<span class="material-symbols-outlined text-outline ml-4">category</span>
+<select class="bg-transparent border-none focus:ring-0 font-manrope font-semibold text-primary py-2 pr-10">
+<option>Todas as Categorias</option>
+<option>Alimentação</option>
+<option>Modas e Acessórios</option>
+<option>Móveis e Eletro</option>
+<option>Tecnologia e Serviços</option>
+<option>Automóveis</option>
+</select>
+</div>
+</div>
+<!-- Category Legend -->
+<div class="flex flex-wrap gap-4 mb-10">
+<span class="flex items-center gap-2 text-label-sm"><span class="w-3 h-3 rounded-full bg-cat-food"></span> Alimentação</span>
+<span class="flex items-center gap-2 text-label-sm"><span class="w-3 h-3 rounded-full bg-cat-modas"></span> Modas</span>
+<span class="flex items-center gap-2 text-label-sm"><span class="w-3 h-3 rounded-full bg-cat-moveis"></span> Móveis</span>
+<span class="flex items-center gap-2 text-label-sm"><span class="w-3 h-3 rounded-full bg-cat-tech"></span> Tecnologia</span>
+<span class="flex items-center gap-2 text-label-sm"><span class="w-3 h-3 rounded-full bg-cat-auto"></span> Automóveis</span>
+</div>
+<!-- Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+<!-- Card 1 - Alimentação -->
+<div class="exhibitor-card bg-surface-container-lowest rounded-xl border-l-4 border-l-cat-food border-y border-r border-outline-variant/10 p-6 md:p-8 shadow-sm transition-all duration-300 flex flex-col h-full">
+<div class="flex flex-col items-center mb-6">
+<div class="w-20 h-20 md:w-16 md:h-16 rounded-full border border-outline-variant/20 overflow-hidden bg-white flex items-center justify-center p-3 mb-4 shadow-inner">
+<img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSrcfxWdc3LBDk6vxBQa-1ewKOSQGvAbhgDaaSuYrBAxp2iWcpAAcJyLZDDVL-BHMd3XkA86EFv2kbuQkSD16Rw1ksIyLW1Gp9LdGKCl-B65cZHORsH1GxIlxLO5lI0USJt1yi9qPPA_4sf7k9ub2GKWY9L9Z0-RmYmZ77Ykk2KCM1qSRJ8MYWLE5NdqtD-zwyQWCyIFf1uDdizDj0PCzWpslu4yUeQlKpF-jDIPDs454J3OlJnxId"/>
+</div>
+<span class="px-3 py-1 bg-cat-food text-white font-manrope font-bold text-[10px] md:text-[12px] uppercase rounded-lg tracking-wider">Alimentação</span>
+</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 text-center">Sabor da Amazônia</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow text-center">
+                        Gastronomia regional com foco em produtos sustentáveis da biodiversidade paraense.
+                    </p>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex gap-2 justify-center">
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-primary border border-outline-variant/10 active:bg-primary active:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">language</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-primary border border-outline-variant/10 active:bg-primary active:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+<a class="h-12 flex items-center justify-center gap-2 rounded-xl bg-primary text-on-primary font-manrope font-bold text-label-sm shadow-sm" href="tel:+559100000000">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                                CONTATO
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 2 - Modas -->
+<div class="exhibitor-card bg-surface-container-lowest rounded-xl border-l-4 border-l-cat-modas border-y border-r border-outline-variant/10 p-6 md:p-8 shadow-sm transition-all duration-300 flex flex-col h-full">
+<div class="flex flex-col items-center mb-6">
+<div class="w-20 h-20 md:w-16 md:h-16 rounded-full border border-outline-variant/20 overflow-hidden bg-white flex items-center justify-center p-3 mb-4 shadow-inner">
+<img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_mVEuQ9y6V1I4W4FMY6PaVUj1h1CPCma10hwZgpIIhfJew16Fl0K0UVvXW9XjjZ1KeNPIwyMAcNkGThuLeOQRYDq7WxMW8EZ_Av57M2TsvtAC6ktbZyDEQuRZF7Xj2T-OtsxPgpCIO7IsKArhnwiEW1feyc7BOqLaqaG46-byJHo81Cvtdr9F1JUvxUgEiFLaWGl0zyuvePr2MU3qYkTzmtMniSNV7kww-38WRWeyp8nj9P0GGbSQ"/>
+</div>
+<span class="px-3 py-1 bg-cat-modas text-white font-manrope font-bold text-[10px] md:text-[12px] uppercase rounded-lg tracking-wider">Modas</span>
+</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 text-center">Estilo Paraense</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow text-center">
+                        Moda autoral e acessórios inspirados na cultura local com materiais eco-conscientes.
+                    </p>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex gap-2 justify-center">
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-primary border border-outline-variant/10 active:bg-primary active:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">language</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-primary border border-outline-variant/10 active:bg-primary active:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+</a>
+</div>
+<a class="h-12 flex items-center justify-center gap-2 rounded-xl bg-primary text-on-primary font-manrope font-bold text-label-sm shadow-sm" href="tel:+559100000001">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                                CONTATO
+                            </a>
+</div>
+</div>
+</div>
+<!-- Card 3 - Tecnologia -->
+<div class="exhibitor-card bg-surface-container-lowest rounded-xl border-l-4 border-l-cat-tech border-y border-r border-outline-variant/10 p-6 md:p-8 shadow-sm transition-all duration-300 flex flex-col h-full">
+<div class="flex flex-col items-center mb-6">
+<div class="w-20 h-20 md:w-16 md:h-16 rounded-full border border-outline-variant/20 overflow-hidden bg-white flex items-center justify-center p-3 mb-4 shadow-inner">
+<img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPH1b4W4T79vFeI52oGUvGLBKEsZjZ8lGNZwHNPeJeEsm1UKbE9GBLc8x_N-6vxetVGIaqxdo10fi2sb2n3rDI7S9CT2Ma69jXHajgJhkpo8reF9QaP_SXspKoNH4A-BnZT3Yq0dmiua6aIUxXGZHjgdduPH09Wvzn-Ev1-TswYL_zaLirLljS101PIUVcmbSvbJVTIQJRo2uLLVN7al_dbjyIfynlUb3RhKWVg4q7S4wb3p9wvs56"/>
+</div>
+<span class="px-3 py-1 bg-cat-tech text-white font-manrope font-bold text-[10px] md:text-[12px] uppercase rounded-lg tracking-wider">Tecnologia</span>
+</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 text-center">Norte Digital</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow text-center">
+                        Soluções de software e serviços digitais para modernizar o comércio da região.
+                    </p>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex gap-2 justify-center">
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-primary border border-outline-variant/10 active:bg-primary active:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">language</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-primary border border-outline-variant/10 active:bg-primary active:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+</a>
+</div>
+<a class="h-12 flex items-center justify-center gap-2 rounded-xl bg-primary text-on-primary font-manrope font-bold text-label-sm shadow-sm" href="tel:+559100000002">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                                CONTATO
+                            </a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 md:mt-20 text-center">
+<button class="w-full md:w-auto btn-primary border border-primary text-primary px-12 py-4 font-manrope font-bold text-title-md rounded-xl hover:bg-primary hover:text-on-primary transition-all duration-300">
+                    Ver todos os Expositores
+                </button>
+</div>
+</div>
+</section>
+<!-- Information / Location Section -->
+<section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-background" id="location">
+<div class="max-w-container-max mx-auto grid grid-cols-12 gap-6 md:gap-gutter">
+<div class="col-span-12 lg:col-span-7 bg-surface-container rounded-3xl overflow-hidden relative min-h-[300px] md:min-h-[400px]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfNN9_Xc7JOUkYebYdXrLRs3QQg6n2PSFKdGEvOITYzB27phLUjmSPkuNf564mSdmoAYEdqIyuO-1LA8sEJKV4-MUL9bEFkQrZAjL1w1S5D2LjVwF-gwVbZbp15FiKjaZwQDno0NoyLFRhbuGWIxSZm7HGivW6ZpBmiMSwTQqNf-o-awG9TPGGftEhK_YjuZRDKWwBOpG2UA5tZTHBrKTWZrGQDYGTc2Q-SuYAUdRKlHYcP2g1ndcL"/>
+</div>
+<div class="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 z-10 bg-surface-container-lowest/95 backdrop-blur-md p-6 rounded-2xl border border-outline-variant/10 shadow-lg">
+<h3 class="font-manrope font-bold text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Local do Evento</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Centro de Convenções - Concórdia do Pará, PA</p>
+<a class="text-primary font-manrope font-bold flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                        Abrir no Google Maps
+                        <span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-6">
+<div class="bg-primary-container text-on-primary-container p-8 md:p-10 rounded-3xl flex-grow flex flex-col justify-between shadow-sm">
+<div>
+<span class="material-symbols-outlined text-[40px] md:text-[48px] mb-6 text-on-primary-container">event_available</span>
+<h3 class="font-display-lg text-[24px] md:text-headline-lg mb-4 text-on-primary leading-tight">11 e 12 de Julho, 2024</h3>
+<p class="font-body-md md:font-body-lg text-on-primary-container/90">Portões abertos das 09h às 22h. Dois dias de networking intenso e oportunidades.</p>
+</div>
+<a class="mt-8 font-manrope font-extrabold text-title-md flex items-center gap-2 text-on-primary hover:translate-x-1 transition-transform" href="#">
+                        Adicionar ao Calendário
+                        <span class="material-symbols-outlined">calendar_today</span>
+</a>
+</div>
+<div class="bg-secondary-container text-on-secondary-container p-8 md:p-10 rounded-3xl shadow-sm">
+<h4 class="font-manrope font-bold text-title-md mb-2">Precisa de Ajuda?</h4>
+<p class="font-body-md mb-6">Nossa equipe de concierge está pronta para ajudar com dúvidas sobre o evento ou exposição.</p>
+<button class="w-full md:w-auto bg-primary text-on-primary px-8 py-3 rounded-xl font-manrope font-bold hover:opacity-90 transition-opacity">Contato Suporte</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary relative overflow-hidden">
+<div class="absolute inset-0 opacity-5 pointer-events-none">
+<div class="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-secondary rounded-full blur-[120px]"></div>
+<div class="absolute -bottom-1/2 -left-1/4 w-[800px] h-[800px] bg-primary-fixed-dim rounded-full blur-[120px]"></div>
+</div>
+<div class="max-w-3xl mx-auto text-center relative z-10">
+<h2 class="font-display-lg text-[32px] md:text-display-lg mb-8 leading-tight">Pronto para expandir seus horizontes?</h2>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-primary/80 mb-10 md:mb-12">
+                Garanta seu lugar no evento de negócios mais aguardado do ano. Inscrições gratuitas e limitadas.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+<button class="bg-on-primary text-primary px-10 py-4 md:px-12 md:py-5 font-manrope font-extrabold text-title-md rounded-xl hover:bg-primary-fixed transition-all w-full sm:w-auto shadow-lg">
+                    Inscrição Gratuita
+                </button>
+<button class="border border-on-primary text-on-primary px-10 py-4 md:px-12 md:py-5 font-manrope font-extrabold text-title-md rounded-xl hover:bg-white/10 transition-all w-full sm:w-auto">
+                    Quero ser Expositor
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-gutter">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-manrope font-bold text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Expo Negócios</span>
+<p class="font-body-md text-on-surface-variant max-w-xs text-center md:text-left">
+                © 2024 Expo Negócios. Amazonian Business Excellence.<br/>
+<a class="text-primary hover:underline" href="https://viranegocios.com">viranegocios.com</a>
+</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6 md:gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Termos</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Suporte</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Mapa</a>
+</nav>
+<div class="flex gap-6">
+<a class="text-primary hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-[24px]">share</span></a>
+<a class="text-primary hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-[24px]">linked_camera</span></a>
+<a class="text-primary hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined text-[24px]">alternate_email</span></a>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button for Contact -->
+<div class="fixed bottom-6 right-6 z-50 md:bottom-8 md:right-8">
+<button class="w-14 h-14 md:w-16 md:h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group">
+<span class="material-symbols-outlined text-[28px] md:text-[32px] group-hover:rotate-12 transition-transform">chat_bubble</span>
+</button>
+</div>
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-md');
+        } else {
+            header.classList.remove('shadow-md');
+        }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body></html>
