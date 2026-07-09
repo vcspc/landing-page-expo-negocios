@@ -1,39 +1,46 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 export default function LocationSection() {
-  const handleAddToCalendar = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const [showOptions, setShowOptions] = useState(false);
+
+  const title = "Expo Negócios 2024";
+  const description = "Expo Negócios - Conectando Ideias e Oportunidades. Dois dias de networking intenso e grandes oportunidades comerciais.";
+  const location = "Complexo Turístico Lago do Onça - Concórdia do Pará, PA";
+  
+  // Dates: 11 and 12 July 2024. Hours: 09h to 22h.
+  // Timezone: America/Belem (UTC-3).
+  // July 11, 2024 09:00 BRT = 12:00 UTC
+  // July 12, 2024 22:00 BRT = July 13, 2024 01:00 UTC
+  const startDate = "20240711T120000Z";
+  const endDate = "20240713T010000Z";
+
+  // Google Calendar URL
+  const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
+
+  // Apple Calendar Data URI (Triggers native iOS calendar integration directly on Safari)
+  const icsData = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Expo Negocios//Landing Page//PT",
+    "BEGIN:VEVENT",
+    `UID:expo-negocios-2024-${Date.now()}@exponegocios.com.br`,
+    `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z`,
+    `DTSTART:${startDate}`,
+    `DTEND:${endDate}`,
+    `SUMMARY:${title}`,
+    `DESCRIPTION:${description}`,
+    `LOCATION:${location}`,
+    "END:VEVENT",
+    "END:VCALENDAR"
+  ].join("\r\n");
+
+  const appleUrl = `data:text/calendar;charset=utf-8,${encodeURIComponent(icsData)}`;
+
+  const handleIcsDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-
-    const title = "Expo Negócios 2024";
-    const description = "Expo Negócios - Conectando Ideias e Oportunidades. Dois dias de networking intenso e grandes oportunidades comerciais.";
-    const location = "Centro de Convenções - Concórdia do Pará, PA";
-
-    // Dates: 11 and 12 July 2024. Hours: 09h to 22h.
-    // Timezone: America/Belem (UTC-3).
-    // July 11, 2024 09:00 BRT = 12:00 UTC
-    // July 12, 2024 22:00 BRT = July 13, 2024 01:00 UTC
-    const startDate = "20240711T120000Z";
-    const endDate = "20240713T010000Z";
-
-    const icsContent = [
-      "BEGIN:VCALENDAR",
-      "VERSION:2.0",
-      "PRODID:-//Expo Negocios//Landing Page//PT",
-      "BEGIN:VEVENT",
-      `UID:expo-negocios-2024-${Date.now()}@exponegocios.com.br`,
-      `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z`,
-      `DTSTART:${startDate}`,
-      `DTEND:${endDate}`,
-      `SUMMARY:${title}`,
-      `DESCRIPTION:${description}`,
-      `LOCATION:${location}`,
-      "END:VEVENT",
-      "END:VCALENDAR"
-    ].join("\r\n");
-
-    const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+    const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
@@ -99,14 +106,57 @@ export default function LocationSection() {
                 oportunidades comerciais.
               </p>
             </div>
-            <a
-              className="mt-8 font-manrope font-extrabold text-title-md flex items-center gap-2 text-on-primary hover:translate-x-1 transition-transform cursor-pointer w-fit"
-              onClick={handleAddToCalendar}
-              href="#"
-            >
-              Adicionar ao Calendário
-              <span className="material-symbols-outlined">calendar_today</span>
-            </a>
+            <div className="relative mt-8">
+              <button
+                className="font-manrope font-extrabold text-title-md flex items-center gap-2 text-on-primary hover:translate-x-1 transition-transform cursor-pointer w-fit"
+                onClick={() => setShowOptions(!showOptions)}
+              >
+                Adicionar ao Calendário
+                <span className="material-symbols-outlined">calendar_today</span>
+              </button>
+
+              {showOptions && (
+                <>
+                  {/* Backdrop Click Handler */}
+                  <div
+                    className="fixed inset-0 z-10 cursor-default"
+                    onClick={() => setShowOptions(false)}
+                  />
+                  {/* Dropdown Options */}
+                  <div className="absolute left-0 bottom-full mb-3 bg-surface-container-highest/95 backdrop-blur-md border border-outline-variant/20 rounded-2xl shadow-xl p-2 min-w-[245px] flex flex-col gap-1 z-20 animate-fade-in text-on-surface">
+                    <a
+                      href={googleUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 rounded-xl transition-colors text-body-md font-semibold text-on-surface hover:text-primary"
+                      onClick={() => setShowOptions(false)}
+                    >
+                      <span className="material-symbols-outlined text-primary text-xl font-icon">google</span>
+                      Google Agenda (Android/PC)
+                    </a>
+                    <a
+                      href={appleUrl}
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 rounded-xl transition-colors text-body-md font-semibold text-on-surface hover:text-primary"
+                      onClick={() => setShowOptions(false)}
+                    >
+                      <span className="material-symbols-outlined text-primary text-xl font-icon">phone_iphone</span>
+                      Apple Calendar (iPhone)
+                    </a>
+                    <a
+                      href="#"
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 rounded-xl transition-colors text-body-md font-semibold text-on-surface hover:text-primary"
+                      onClick={(e) => {
+                        handleIcsDownload(e);
+                        setShowOptions(false);
+                      }}
+                    >
+                      <span className="material-symbols-outlined text-primary text-xl font-icon">download</span>
+                      Outlook / Outros (.ics)
+                    </a>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
