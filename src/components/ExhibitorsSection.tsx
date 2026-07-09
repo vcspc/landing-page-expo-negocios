@@ -6,48 +6,124 @@ import { EXHIBITORS, Exhibitor } from "../data/exhibitors";
 type CategoryType =
   | "Todas"
   | "Alimentação"
-  | "Modas e Acessórios"
-  | "Móveis e Eletro"
-  | "Tecnologia e Serviços"
-  | "Automóveis"
+  | "Moda e Confecção"
+  | "Saúde e Bem-estar"
+  | "Agricultura Familiar"
   | "Artesanato e Cultura"
-  | "Beleza e Bem-estar"
-  | "Agricultura Familiar";
+  | "Serviços e Tecnologia"
+  | "Recreação Infantil"
+  | "Hotelaria e Turismo"
+  | "Construção, Pneus e Motos";
 
 const CATEGORIES: CategoryType[] = [
   "Todas",
   "Alimentação",
-  "Modas e Acessórios",
-  "Móveis e Eletro",
-  "Tecnologia e Serviços",
-  "Automóveis",
-  "Artesanato e Cultura",
-  "Beleza e Bem-estar",
+  "Moda e Confecção",
+  "Saúde e Bem-estar",
   "Agricultura Familiar",
+  "Artesanato e Cultura",
+  "Serviços e Tecnologia",
+  "Recreação Infantil",
+  "Hotelaria e Turismo",
+  "Construção, Pneus e Motos",
 ];
 
 // Helper to get category colors for styling cards
 const getCategoryStyle = (categoryKey: string) => {
   switch (categoryKey) {
     case "alimentacao":
-      return { border: "border-l-cat-food", badge: "bg-cat-food text-white" };
-    case "modas":
-      return { border: "border-l-cat-modas", badge: "bg-cat-modas text-white" };
-    case "moveis":
-      return { border: "border-l-cat-moveis", badge: "bg-cat-moveis text-white" };
-    case "tecnologia":
-      return { border: "border-l-cat-tech", badge: "bg-cat-tech text-white" };
-    case "automoveis":
-      return { border: "border-l-cat-auto", badge: "bg-cat-auto text-white" };
-    case "artesanato":
-      return { border: "border-l-amber-600", badge: "bg-amber-600 text-white" };
-    case "beleza":
-      return { border: "border-l-rose-500", badge: "bg-rose-500 text-white" };
+      return { border: "border-l-cat-alimentacao", badge: "bg-cat-alimentacao text-white" };
+    case "moda_confeccao":
+      return { border: "border-l-cat-moda-confeccao", badge: "bg-cat-moda-confeccao text-white" };
+    case "saude_bem_estar":
+      return { border: "border-l-cat-saude-bem-estar", badge: "bg-cat-saude-bem-estar text-white" };
     case "agricultura":
-      return { border: "border-l-emerald-700", badge: "bg-emerald-700 text-white" };
+      return {
+        border: "border-l-cat-agricultura-mixed",
+        badge: "bg-gradient-agri text-white",
+      };
+    case "artesanato_cultura":
+      return { border: "border-l-cat-artesanato-cultura", badge: "bg-cat-artesanato-cultura text-white" };
+    case "servicos_tecnologia":
+      return { border: "border-l-cat-servicos-tecnologia", badge: "bg-cat-servicos-tecnologia text-white" };
+    case "recreacao_infantil":
+      return { border: "border-l-cat-recreacao-infantil", badge: "bg-cat-recreacao-infantil text-white" };
+    case "hotelaria_turismo":
+      return { border: "border-l-cat-hotelaria-turismo", badge: "bg-cat-hotelaria-turismo text-white" };
+    case "construcao_pneus_motos":
+      return { border: "border-l-cat-construcao-pneus-motos", badge: "bg-cat-construcao-pneus-motos text-white" };
     default:
       return { border: "border-l-primary", badge: "bg-primary text-white" };
   }
+};
+
+const getCategoryPillStyle = (category: CategoryType, isActive: boolean) => {
+  if (!isActive) {
+    return "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low hover:border-outline-variant/30 hover:scale-[1.03] active:scale-[0.97]";
+  }
+
+  switch (category) {
+    case "Todas":
+      return "bg-primary text-on-primary border-primary shadow-md shadow-primary/10 hover:scale-[1.03] active:scale-[0.97]";
+    case "Alimentação":
+      return "bg-cat-alimentacao text-white border-cat-alimentacao shadow-md shadow-red-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    case "Moda e Confecção":
+      return "bg-cat-moda-confeccao text-white border-cat-moda-confeccao shadow-md shadow-pink-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    case "Saúde e Bem-estar":
+      return "bg-cat-saude-bem-estar text-white border-cat-saude-bem-estar shadow-md shadow-green-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    case "Agricultura Familiar":
+      return "bg-gradient-agri text-white border-cat-agricultura-mixed shadow-md shadow-emerald-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    case "Artesanato e Cultura":
+      return "bg-cat-artesanato-cultura text-white border-cat-artesanato-cultura shadow-md shadow-yellow-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    case "Serviços e Tecnologia":
+      return "bg-cat-servicos-tecnologia text-white border-cat-servicos-tecnologia shadow-md shadow-blue-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    case "Recreação Infantil":
+      return "bg-cat-recreacao-infantil text-white border-cat-recreacao-infantil shadow-md shadow-orange-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    case "Hotelaria e Turismo":
+      return "bg-cat-hotelaria-turismo text-white border-cat-hotelaria-turismo shadow-md shadow-purple-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    case "Construção, Pneus e Motos":
+      return "bg-cat-construcao-pneus-motos text-white border-cat-construcao-pneus-motos shadow-md shadow-gray-500/20 hover:scale-[1.03] active:scale-[0.97]";
+    default:
+      return "bg-primary text-on-primary border-primary shadow-md hover:scale-[1.03] active:scale-[0.97]";
+  }
+};
+
+const renderCategoryDot = (category: CategoryType, isActive: boolean) => {
+  if (category === "Todas") return null;
+
+  if (category === "Agricultura Familiar") {
+    return (
+      <div className="flex gap-0.5 items-center mr-1">
+        <span className={`w-2.5 h-2.5 rounded-full border ${isActive ? "bg-white border-white/20" : "bg-cat-agricultura-brown border-black/10"}`}></span>
+        <span className={`w-2.5 h-2.5 rounded-full border ${isActive ? "bg-white border-white/20" : "bg-cat-agricultura-green border-black/10"}`}></span>
+      </div>
+    );
+  }
+
+  const dotColorClass = (() => {
+    switch (category) {
+      case "Alimentação":
+        return "bg-cat-alimentacao";
+      case "Moda e Confecção":
+        return "bg-cat-moda-confeccao";
+      case "Saúde e Bem-estar":
+        return "bg-cat-saude-bem-estar";
+      case "Artesanato e Cultura":
+        return "bg-cat-artesanato-cultura";
+      case "Serviços e Tecnologia":
+        return "bg-cat-servicos-tecnologia";
+      case "Recreação Infantil":
+        return "bg-cat-recreacao-infantil";
+      case "Hotelaria e Turismo":
+        return "bg-cat-hotelaria-turismo";
+      case "Construção, Pneus e Motos":
+        return "bg-cat-construcao-pneus-motos";
+      default:
+        return "";
+    }
+  })();
+
+  return <span className={`w-2.5 h-2.5 rounded-full border ${isActive ? "bg-white border-white/20" : `${dotColorClass} border-black/10`} mr-1`}></span>;
 };
 
 export default function ExhibitorsSection() {
@@ -111,96 +187,20 @@ export default function ExhibitorsSection() {
 
         {/* Category Legend & Pills */}
         <div className="flex flex-wrap gap-3 mb-10">
-          <button
-            onClick={() => handleCategoryClick("Todas")}
-            className={`px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Todas"
-                ? "bg-primary text-on-primary border-primary"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            Todas
-          </button>
-          <button
-            onClick={() => handleCategoryClick("Alimentação")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Alimentação"
-                ? "bg-cat-food text-white border-cat-food"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-cat-food"></span> Alimentação
-          </button>
-          <button
-            onClick={() => handleCategoryClick("Modas e Acessórios")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Modas e Acessórios"
-                ? "bg-cat-modas text-white border-cat-modas"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-cat-modas"></span> Modas
-          </button>
-          <button
-            onClick={() => handleCategoryClick("Móveis e Eletro")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Móveis e Eletro"
-                ? "bg-cat-moveis text-white border-cat-moveis"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-cat-moveis"></span> Móveis
-          </button>
-          <button
-            onClick={() => handleCategoryClick("Tecnologia e Serviços")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Tecnologia e Serviços"
-                ? "bg-cat-tech text-white border-cat-tech"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-cat-tech"></span> Tecnologia
-          </button>
-          <button
-            onClick={() => handleCategoryClick("Automóveis")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Automóveis"
-                ? "bg-cat-auto text-white border-cat-auto"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-cat-auto"></span> Automóveis
-          </button>
-          <button
-            onClick={() => handleCategoryClick("Artesanato e Cultura")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Artesanato e Cultura"
-                ? "bg-amber-600 text-white border-amber-600"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-600"></span> Artesanato
-          </button>
-          <button
-            onClick={() => handleCategoryClick("Beleza e Bem-estar")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Beleza e Bem-estar"
-                ? "bg-rose-500 text-white border-rose-500"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-rose-500"></span> Beleza
-          </button>
-          <button
-            onClick={() => handleCategoryClick("Agricultura Familiar")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all cursor-pointer ${
-              selectedCategory === "Agricultura Familiar"
-                ? "bg-emerald-700 text-white border-emerald-700"
-                : "bg-surface-container-lowest text-on-surface-variant border-outline-variant/15 hover:bg-surface-container-low"
-            }`}
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-700"></span> Agricultura
-          </button>
+          {CATEGORIES.map((cat) => {
+            const isActive = selectedCategory === cat;
+            const pillStyle = getCategoryPillStyle(cat, isActive);
+            return (
+              <button
+                key={cat}
+                onClick={() => handleCategoryClick(cat)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-full font-manrope font-bold text-label-sm border transition-all duration-300 cursor-pointer ${pillStyle}`}
+              >
+                {renderCategoryDot(cat, isActive)}
+                {cat}
+              </button>
+            );
+          })}
         </div>
 
         {/* Card Grid */}

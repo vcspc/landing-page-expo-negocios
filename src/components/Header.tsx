@@ -21,9 +21,8 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full top-0 sticky z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/15 transition-all duration-300 ${
-        isScrolled ? "shadow-md" : ""
-      }`}
+      className={`w-full top-0 sticky z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/15 transition-all duration-300 ${isScrolled ? "shadow-md" : ""
+        }`}
     >
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
         {/* Logo */}
@@ -55,22 +54,16 @@ export default function Header() {
           >
             Prêmios
           </a>
-          <a
+          {/* <a
             className="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200"
             href="#location"
           >
             Localização
-          </a>
+          </a> */}
         </nav>
 
         {/* Action Button & Hamburger Toggle */}
         <div className="flex items-center gap-4 md:gap-6">
-          <a
-            href="#details"
-            className="hidden md:block btn-primary bg-primary text-on-primary px-8 py-3 font-manrope font-bold text-body-md rounded-lg hover:bg-primary-container transition-all"
-          >
-            Participar
-          </a>
           <button
             onClick={toggleMobileMenu}
             className="md:hidden text-primary focus:outline-none"
@@ -113,13 +106,6 @@ export default function Header() {
             href="#location"
           >
             Localização
-          </a>
-          <a
-            onClick={() => setIsMobileMenuOpen(false)}
-            href="#details"
-            className="btn-primary bg-primary text-on-primary text-center py-4 font-manrope font-bold text-body-md rounded-lg hover:bg-primary-container transition-all mt-2"
-          >
-            Participar
           </a>
         </div>
       )}

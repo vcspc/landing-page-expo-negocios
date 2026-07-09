@@ -27,9 +27,6 @@ export default function Footer() {
             Termos
           </a>
           <a className="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">
-            Suporte
-          </a>
-          <a className="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">
             Mapa
           </a>
         </nav>

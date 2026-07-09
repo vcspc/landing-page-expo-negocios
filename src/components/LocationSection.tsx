@@ -2,11 +2,11 @@ export default function LocationSection() {
   return (
     <section
       className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-background"
-      id="location"
+      id="details"
     >
       <div className="max-w-container-max mx-auto grid grid-cols-12 gap-6 md:gap-gutter">
         {/* Map Card */}
-        <div className="col-span-12 lg:col-span-7 bg-surface-container rounded-3xl overflow-hidden relative min-h-[300px] md:min-h-[400px]">
+        <div className="col-span-12 lg:col-span-8 bg-surface-container rounded-3xl overflow-hidden relative min-h-[300px] md:min-h-[400px]">
           <div className="absolute inset-0 z-0">
             <img
               className="w-full h-full object-cover"
@@ -33,8 +33,8 @@ export default function LocationSection() {
           </div>
         </div>
 
-        {/* Date and Support Details */}
-        <div className="col-span-12 lg:col-span-5 flex flex-col gap-6">
+        {/* Date Details */}
+        <div className="col-span-12 lg:col-span-4 flex flex-col">
           {/* Calendar Card */}
           <div className="bg-primary-container text-on-primary-container p-8 md:p-10 rounded-3xl flex-grow flex flex-col justify-between shadow-sm">
             <div>
@@ -56,17 +56,6 @@ export default function LocationSection() {
               Adicionar ao Calendário
               <span className="material-symbols-outlined">calendar_today</span>
             </a>
-          </div>
-
-          {/* Concierge Support Card */}
-          <div className="bg-secondary-container text-on-secondary-container p-8 md:p-10 rounded-3xl shadow-sm">
-            <h4 className="font-manrope font-bold text-title-md mb-2">Precisa de Ajuda?</h4>
-            <p className="font-body-md mb-6 leading-relaxed">
-              Nossa equipe de concierge está pronta para ajudar com dúvidas sobre o evento ou sobre como expor a sua marca.
-            </p>
-            <button className="w-full md:w-auto bg-primary text-on-primary px-8 py-3 rounded-xl font-manrope font-bold hover:opacity-90 transition-opacity cursor-pointer">
-              Contato Suporte
-            </button>
           </div>
         </div>
       </div>

@@ -50,11 +50,17 @@
   --color-secondary-fixed-dim: #bdce89;
   
   /* Category Colors */
-  --color-cat-food: #ef4444;
-  --color-cat-modas: #f97316;
-  --color-cat-moveis: #eab308;
-  --color-cat-tech: #3b82f6;
-  --color-cat-auto: #a855f7;
+  --color-cat-alimentacao: #dc2626;
+  --color-cat-moda-confeccao: #db2777;
+  --color-cat-saude-bem-estar: #16a34a;
+  --color-cat-agricultura-brown: #8b4513;
+  --color-cat-agricultura-green: #16a34a;
+  --color-cat-agricultura-mixed: #5c6f3e;
+  --color-cat-artesanato-cultura: #ca8a04;
+  --color-cat-servicos-tecnologia: #2563eb;
+  --color-cat-recreacao-infantil: #ea580c;
+  --color-cat-hotelaria-turismo: #9333ea;
+  --color-cat-construcao-pneus-motos: #4b5563;
 
   /* Custom Spacing */
   --spacing-margin-mobile: 16px;
@@ -156,3 +162,42 @@ body {
 @utility font-headline-lg-mobile { font-family: var(--font-manrope); }
 @utility font-headline-lg { font-family: var(--font-manrope); }
 @utility font-body-lg { font-family: var(--font-hanken-grotesk); }
+
+/* Custom Category Classes for Solid Color Badges, Borders, and Dots */
+.bg-cat-alimentacao { background-color: #dc2626 !important; }
+.border-cat-alimentacao { border-color: #dc2626 !important; }
+.border-l-cat-alimentacao { border-left-color: #dc2626 !important; }
+
+.bg-cat-moda-confeccao { background-color: #db2777 !important; }
+.border-cat-moda-confeccao { border-color: #db2777 !important; }
+.border-l-cat-moda-confeccao { border-left-color: #db2777 !important; }
+
+.bg-cat-saude-bem-estar { background-color: #16a34a !important; }
+.border-cat-saude-bem-estar { border-color: #16a34a !important; }
+.border-l-cat-saude-bem-estar { border-left-color: #16a34a !important; }
+
+.bg-cat-agricultura-brown { background-color: #8b4513 !important; }
+.bg-cat-agricultura-green { background-color: #16a34a !important; }
+.border-l-cat-agricultura-mixed { border-left-color: #5c6f3e !important; }
+.bg-gradient-agri { background-image: linear-gradient(to right, #8b4513, #16a34a) !important; }
+
+.bg-cat-artesanato-cultura { background-color: #ca8a04 !important; }
+.border-cat-artesanato-cultura { border-color: #ca8a04 !important; }
+.border-l-cat-artesanato-cultura { border-left-color: #ca8a04 !important; }
+
+.bg-cat-servicos-tecnologia { background-color: #2563eb !important; }
+.border-cat-servicos-tecnologia { border-color: #2563eb !important; }
+.border-l-cat-servicos-tecnologia { border-left-color: #2563eb !important; }
+
+.bg-cat-recreacao-infantil { background-color: #ea580c !important; }
+.border-cat-recreacao-infantil { border-color: #ea580c !important; }
+.border-l-cat-recreacao-infantil { border-left-color: #ea580c !important; }
+
+.bg-cat-hotelaria-turismo { background-color: #9333ea !important; }
+.border-cat-hotelaria-turismo { border-color: #9333ea !important; }
+.border-l-cat-hotelaria-turismo { border-left-color: #9333ea !important; }
+
+.bg-cat-construcao-pneus-motos { background-color: #4b5563 !important; }
+.border-cat-construcao-pneus-motos { border-color: #4b5563 !important; }
+.border-l-cat-construcao-pneus-motos { border-left-color: #4b5563 !important; }
+

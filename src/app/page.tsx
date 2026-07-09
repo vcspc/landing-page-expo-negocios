@@ -6,7 +6,6 @@ import ExhibitorsSection from "@/components/ExhibitorsSection";
 import LocationSection from "@/components/LocationSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 
 export default function Home() {
   return (
@@ -14,14 +13,13 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <EventDetails />
+        <LocationSection />
+        {/* <EventDetails /> */}
         <Bingo />
         <ExhibitorsSection />
-        <LocationSection />
         <CTA />
       </main>
       <Footer />
-      <FloatingContact />
     </div>
   );
 }

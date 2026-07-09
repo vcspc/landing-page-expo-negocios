@@ -10,14 +10,10 @@ export default function CTA() {
           Pronto para expandir seus horizontes?
         </h2>
         <p className="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-primary/80 mb-10 md:mb-12 leading-relaxed">
-          Garanta seu lugar no evento de negócios mais aguardado do ano. Inscrições gratuitas e
-          limitadas.
+          Participe do evento de negócios mais aguardado do ano e conecte-se com grandes marcas e líderes da região.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
           <button className="bg-on-primary text-primary px-10 py-4 md:px-12 md:py-5 font-manrope font-extrabold text-title-md rounded-xl hover:bg-primary-fixed transition-all w-full sm:w-auto shadow-lg cursor-pointer">
-            Inscrição Gratuita
-          </button>
-          <button className="border border-on-primary text-on-primary px-10 py-4 md:px-12 md:py-5 font-manrope font-extrabold text-title-md rounded-xl hover:bg-white/10 transition-all w-full sm:w-auto cursor-pointer">
             Quero ser Expositor
           </button>
         </div>
