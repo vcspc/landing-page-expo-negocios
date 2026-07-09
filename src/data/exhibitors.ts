@@ -238,7 +238,7 @@ export const EXHIBITORS: Exhibitor[] = [
   },
   {
     id: 'ritmofm',
-    name: 'Ritmo Fm 90,3',
+    name: 'Ritmo FM 90,3',
     category: 'Serviços e Tecnologia',
     categoryKey: 'servicos_tecnologia',
     description: 'Ritmo Fm 90,3 a Rádio que sintoniza você.',
