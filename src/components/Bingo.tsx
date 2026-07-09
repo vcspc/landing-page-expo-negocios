@@ -16,7 +16,7 @@ export default function Bingo() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 group">
             <div>
-              <div className="h-44 w-full flex items-center justify-center mb-6 p-4 bg-white rounded-xl border border-white/10 overflow-hidden">
+              <div className="h-44 w-full flex items-center justify-center mb-6 p-4 rounded-xl overflow-hidden">
                 <img
                   src="/tv.png"
                   alt="4x Televisores 65 polegadas"
@@ -28,7 +28,7 @@ export default function Bingo() {
           </div>
           <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 group">
             <div>
-              <div className="h-44 w-full flex items-center justify-center mb-6 p-4 bg-white rounded-xl border border-white/10 overflow-hidden">
+              <div className="h-44 w-full flex items-center justify-center mb-6 p-4 rounded-xl overflow-hidden">
                 <img
                   src="/moto.png"
                   alt="1x Moto Shineray 125"
@@ -40,7 +40,7 @@ export default function Bingo() {
           </div>
           <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 group">
             <div>
-              <div className="h-44 w-full flex items-center justify-center mb-6 p-4 bg-white rounded-xl border border-white/10 overflow-hidden">
+              <div className="h-44 w-full flex items-center justify-center mb-6 p-4 rounded-xl overflow-hidden">
                 <img
                   src="/phone.png"
                   alt="1x Smartphone"
