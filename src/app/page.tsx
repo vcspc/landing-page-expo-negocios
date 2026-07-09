@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import EventDetails from "@/components/EventDetails";
 import Bingo from "@/components/Bingo";
 import ExhibitorsSection from "@/components/ExhibitorsSection";
+import OrganizersSection from "@/components/OrganizersSection";
 import LocationSection from "@/components/LocationSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -16,8 +17,9 @@ export default function Home() {
         <LocationSection />
         {/* <EventDetails /> */}
         <Bingo />
+        <OrganizersSection />
         <ExhibitorsSection />
-        <CTA />
+        {/* <CTA /> */}
       </main>
       <Footer />
     </div>

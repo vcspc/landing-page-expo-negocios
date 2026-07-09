@@ -37,12 +37,6 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           <a
-            className="font-title-md text-title-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200"
-            href="#exhibitors"
-          >
-            Expositores
-          </a>
-          <a
             className="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200"
             href="#details"
           >
@@ -53,6 +47,18 @@ export default function Header() {
             href="#bingo"
           >
             Prêmios
+          </a>
+          <a
+            className="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="#parceiros"
+          >
+            Parceiros
+          </a>
+          <a
+            className="font-title-md text-title-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200"
+            href="#exhibitors"
+          >
+            Expositores
           </a>
           {/* <a
             className="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200"
@@ -99,6 +105,13 @@ export default function Header() {
             href="#bingo"
           >
             Prêmios
+          </a>
+          <a
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="font-title-md text-title-md text-on-surface-variant py-2 border-b border-outline-variant/10"
+            href="#parceiros"
+          >
+            Parceiros
           </a>
           <a
             onClick={() => setIsMobileMenuOpen(false)}

@@ -241,7 +241,7 @@ export const EXHIBITORS: Exhibitor[] = [
     name: 'Ritmo Fm 90,3',
     category: 'Serviços e Tecnologia',
     categoryKey: 'servicos_tecnologia',
-    description: 'Ritmo Fm 90,3 a Rádio que sintoniza você',
+    description: 'Ritmo Fm 90,3 a Rádio que sintoniza você.',
     logoUrl: 'logo_ritmofm.jpeg',
     phone: '+5591991814241',
     links: {
@@ -259,6 +259,19 @@ export const EXHIBITORS: Exhibitor[] = [
     phone: '+5591991814241',
     links: {
       instagram: '@podcastdolico',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'gbsnet',
+    name: 'GBSNet',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'GBSNet é uma empresa de tecnologia que oferece serviços de internet e telefonia para empresas e residências.',
+    logoUrl: 'logo_gbsnet.jpg',
+    phone: '+5591992225556',
+    links: {
+      instagram: '@gbsnet',
       extraAction: 'instagram'
     },
   }

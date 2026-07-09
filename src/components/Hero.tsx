@@ -3,9 +3,9 @@ export default function Hero() {
     <section className="relative overflow-hidden pt-12 pb-24 md:pt-32 md:pb-48 px-margin-mobile md:px-margin-desktop bg-background">
       <div className="max-w-container-max mx-auto relative z-10">
         <div className="max-w-3xl">
-          <span className="inline-block mb-6 px-4 py-1.5 bg-secondary-container text-on-secondary-container font-manrope font-bold text-label-sm uppercase tracking-widest rounded-full">
+          {/* <span className="inline-block mb-6 px-4 py-1.5 bg-secondary-container text-on-secondary-container font-manrope font-bold text-label-sm uppercase tracking-widest rounded-full">
             Eco-Corporate Modernism 2024
-          </span>
+          </span> */}
           <h1 className="font-display-lg text-[40px] md:text-display-lg lg:text-[64px] text-primary mb-6 leading-tight">
             Expo Negócios
           </h1>
