@@ -2,25 +2,25 @@ export interface Exhibitor {
   id: string;
   name: string;
   category:
-    | 'Alimentação'
-    | 'Moda e Confecção'
-    | 'Saúde e Bem-estar'
-    | 'Agricultura Familiar'
-    | 'Artesanato e Cultura'
-    | 'Serviços e Tecnologia'
-    | 'Recreação Infantil'
-    | 'Hotelaria e Turismo'
-    | 'Construção, Pneus e Motos';
+  | 'Alimentação'
+  | 'Moda e Confecção'
+  | 'Saúde e Bem-estar'
+  | 'Agricultura Familiar'
+  | 'Artesanato e Cultura'
+  | 'Serviços e Tecnologia'
+  | 'Recreação Infantil'
+  | 'Hotelaria e Turismo'
+  | 'Construção, Pneus e Motos';
   categoryKey:
-    | 'alimentacao'
-    | 'moda_confeccao'
-    | 'saude_bem_estar'
-    | 'agricultura'
-    | 'artesanato_cultura'
-    | 'servicos_tecnologia'
-    | 'recreacao_infantil'
-    | 'hotelaria_turismo'
-    | 'construcao_pneus_motos';
+  | 'alimentacao'
+  | 'moda_confeccao'
+  | 'saude_bem_estar'
+  | 'agricultura'
+  | 'artesanato_cultura'
+  | 'servicos_tecnologia'
+  | 'recreacao_infantil'
+  | 'hotelaria_turismo'
+  | 'construcao_pneus_motos';
   description: string;
   logoUrl?: string;
   phone: string;
@@ -36,15 +36,15 @@ export interface Exhibitor {
 
 export const EXHIBITORS: Exhibitor[] = [
   {
-    id: 'sabor-da-amazonia',
-    name: 'Sabor da Amazônia',
-    category: 'Alimentação',
-    categoryKey: 'alimentacao',
-    description: 'Gastronomia regional com foco em produtos sustentáveis da biodiversidade paraense. Desfrute do melhor açaí, pato no tucupi e doces artesanais.',
-    logoUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBSrcfxWdc3LBDk6vxBQa-1ewKOSQGvAbhgDaaSuYrBAxp2iWcpAAcJyLZDDVL-BHMd3XkA86EFv2kbuQkSD16Rw1ksIyLW1Gp9LdGKCl-B65cZHORsH1GxIlxLO5lI0USJt1yi9qPPA_4sf7k9ub2GKWY9L9Z0-RmYmZ77Ykk2KCM1qSRJ8MYWLE5NdqtD-zwyQWCyIFf1uDdizDj0PCzWpslu4yUeQlKpF-jDIPDs454J3OlJnxId',
-    phone: '+559100000000',
+    id: 'univida-med',
+    name: 'Univida Medicina Diagnósticos Ltda',
+    category: 'Saúde e Bem-estar',
+    categoryKey: 'saude_bem_estar',
+    description: 'Clínica médica voltada à oferta de consultas em diversas especialidades (como cardiologia, pediatria e ortopedia) e exames de diagnóstico por imagem (incluindo raio-x digital e videoendoscopia) com foco em preços acessíveis, agilidade e atendimento humanizado.Gastronomia regional com foco em produtos sustentáveis da biodiversidade paraense. Desfrute do melhor açaí, pato no tucupi e doces artesanais.',
+    logoUrl: 'log-unividamed.png',
+    phone: '+5591991807790',
     links: {
-      website: '#',
+      website: 'https://www.unividamed.com.br',
       extraAction: 'share'
     }
   },
