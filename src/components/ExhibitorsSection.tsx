@@ -32,28 +32,65 @@ const CATEGORIES: CategoryType[] = [
 const getCategoryStyle = (categoryKey: string) => {
   switch (categoryKey) {
     case "alimentacao":
-      return { border: "border-l-cat-alimentacao", badge: "bg-cat-alimentacao text-white" };
+      return { 
+        border: "border-l-cat-alimentacao", 
+        badge: "bg-cat-alimentacao text-white",
+        logoRing: "ring-4 ring-cat-alimentacao/10 border-cat-alimentacao/30"
+      };
     case "moda_confeccao":
-      return { border: "border-l-cat-moda-confeccao", badge: "bg-cat-moda-confeccao text-white" };
+      return { 
+        border: "border-l-cat-moda-confeccao", 
+        badge: "bg-cat-moda-confeccao text-white",
+        logoRing: "ring-4 ring-cat-moda-confeccao/10 border-cat-moda-confeccao/30"
+      };
     case "saude_bem_estar":
-      return { border: "border-l-cat-saude-bem-estar", badge: "bg-cat-saude-bem-estar text-white" };
+      return { 
+        border: "border-l-cat-saude-bem-estar", 
+        badge: "bg-cat-saude-bem-estar text-white",
+        logoRing: "ring-4 ring-cat-saude-bem-estar/10 border-cat-saude-bem-estar/30"
+      };
     case "agricultura":
       return {
         border: "border-l-cat-agricultura-mixed",
         badge: "bg-gradient-agri text-white",
+        logoRing: "ring-4 ring-emerald-500/10 border-emerald-500/30"
       };
     case "artesanato_cultura":
-      return { border: "border-l-cat-artesanato-cultura", badge: "bg-cat-artesanato-cultura text-white" };
+      return { 
+        border: "border-l-cat-artesanato-cultura", 
+        badge: "bg-cat-artesanato-cultura text-white",
+        logoRing: "ring-4 ring-cat-artesanato-cultura/10 border-cat-artesanato-cultura/30"
+      };
     case "servicos_tecnologia":
-      return { border: "border-l-cat-servicos-tecnologia", badge: "bg-cat-servicos-tecnologia text-white" };
+      return { 
+        border: "border-l-cat-servicos-tecnologia", 
+        badge: "bg-cat-servicos-tecnologia text-white",
+        logoRing: "ring-4 ring-cat-servicos-tecnologia/10 border-cat-servicos-tecnologia/30"
+      };
     case "recreacao_infantil":
-      return { border: "border-l-cat-recreacao-infantil", badge: "bg-cat-recreacao-infantil text-white" };
+      return { 
+        border: "border-l-cat-recreacao-infantil", 
+        badge: "bg-cat-recreacao-infantil text-white",
+        logoRing: "ring-4 ring-cat-recreacao-infantil/10 border-cat-recreacao-infantil/30"
+      };
     case "hotelaria_turismo":
-      return { border: "border-l-cat-hotelaria-turismo", badge: "bg-cat-hotelaria-turismo text-white" };
+      return { 
+        border: "border-l-cat-hotelaria-turismo", 
+        badge: "bg-cat-hotelaria-turismo text-white",
+        logoRing: "ring-4 ring-cat-hotelaria-turismo/10 border-cat-hotelaria-turismo/30"
+      };
     case "construcao_pneus_motos":
-      return { border: "border-l-cat-construcao-pneus-motos", badge: "bg-cat-construcao-pneus-motos text-white" };
+      return { 
+        border: "border-l-cat-construcao-pneus-motos", 
+        badge: "bg-cat-construcao-pneus-motos text-white",
+        logoRing: "ring-4 ring-cat-construcao-pneus-motos/10 border-cat-construcao-pneus-motos/30"
+      };
     default:
-      return { border: "border-l-primary", badge: "bg-primary text-white" };
+      return { 
+        border: "border-l-primary", 
+        badge: "bg-primary text-white",
+        logoRing: "ring-4 ring-primary/10 border-primary/30"
+      };
   }
 };
 
@@ -226,11 +263,11 @@ export default function ExhibitorsSection() {
               return (
                 <div
                   key={exhibitor.id}
-                  className={`exhibitor-card bg-surface-container-lowest rounded-xl border-l-4 ${style.border} border-y border-r border-outline-variant/10 p-6 md:p-8 shadow-sm transition-all duration-300 flex flex-col h-full`}
+                  className={`exhibitor-card group bg-surface-container-lowest rounded-xl border-l-4 ${style.border} border-y border-r border-outline-variant/10 p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02] flex flex-col h-full`}
                 >
                   {/* Logo Container */}
                   <div className="flex flex-col items-center mb-6">
-                    <div className="w-20 h-20 md:w-16 md:h-16 rounded-full border border-outline-variant/20 overflow-hidden bg-white flex items-center justify-center p-3 mb-4 shadow-inner">
+                    <div className={`w-24 h-24 rounded-full border-2 ${style.logoRing} overflow-hidden bg-white flex items-center justify-center p-2 mb-4 shadow-md transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg`}>
                       {exhibitor.logoUrl ? (
                         <img
                           className="w-full h-full object-contain"
@@ -238,7 +275,7 @@ export default function ExhibitorsSection() {
                           alt={`${exhibitor.name} Logo`}
                         />
                       ) : (
-                        <div className="w-full h-full rounded-full bg-primary-fixed text-primary flex items-center justify-center font-manrope font-bold text-title-md">
+                        <div className="w-full h-full rounded-full bg-primary-fixed text-primary flex items-center justify-center font-manrope font-bold text-title-md group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
                           {getInitials(exhibitor.name)}
                         </div>
                       )}

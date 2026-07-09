@@ -40,7 +40,7 @@ export const EXHIBITORS: Exhibitor[] = [
     name: 'Univida Medicina Diagnósticos Ltda',
     category: 'Saúde e Bem-estar',
     categoryKey: 'saude_bem_estar',
-    description: 'Clínica médica voltada à oferta de consultas em diversas especialidades (como cardiologia, pediatria e ortopedia) e exames de diagnóstico por imagem (incluindo raio-x digital e videoendoscopia) com foco em preços acessíveis, agilidade e atendimento humanizado.Gastronomia regional com foco em produtos sustentáveis da biodiversidade paraense. Desfrute do melhor açaí, pato no tucupi e doces artesanais.',
+    description: 'Clínica médica voltada à oferta de consultas em diversas especialidades (como cardiologia, pediatria e ortopedia) e exames de diagnóstico por imagem (incluindo raio-x digital e videoendoscopia) com foco em preços acessíveis, agilidade e atendimento humanizado.',
     logoUrl: 'logo_unividamed.svg',
     phone: '+5591991807790',
     links: {
