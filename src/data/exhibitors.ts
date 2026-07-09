@@ -50,146 +50,216 @@ export const EXHIBITORS: Exhibitor[] = [
     }
   },
   {
-    id: 'estilo-paraense',
-    name: 'Estilo Paraense',
-    category: 'Moda e Confecção',
-    categoryKey: 'moda_confeccao',
-    description: 'Moda autoral e acessórios inspirados na cultura local com materiais eco-conscientes e estampas exclusivas inspiradas no Marajó.',
-    logoUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_mVEuQ9y6V1I4W4FMY6PaVUj1h1CPCma10hwZgpIIhfJew16Fl0K0UVvXW9XjjZ1KeNPIwyMAcNkGThuLeOQRYDq7WxMW8EZ_Av57M2TsvtAC6ktbZyDEQuRZF7Xj2T-OtsxPgpCIO7IsKArhnwiEW1feyc7BOqLaqaG46-byJHo81Cvtdr9F1JUvxUgEiFLaWGl0zyuvePr2MU3qYkTzmtMniSNV7kww-38WRWeyp8nj9P0GGbSQ',
-    phone: '+559100000001',
-    links: {
-      website: '#',
-      extraAction: 'shopping_bag'
-    }
-  },
-  {
-    id: 'norte-digital',
-    name: 'Norte Digital',
+    id: 'eletrocity',
+    name: 'Eletrocity',
     category: 'Serviços e Tecnologia',
     categoryKey: 'servicos_tecnologia',
-    description: 'Soluções de software, sistemas de gestão e serviços digitais para modernizar o comércio e impulsionar a transformação digital regional.',
-    logoUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDPH1b4W4T79vFeI52oGUvGLBKEsZjZ8lGNZwHNPeJeEsm1UKbE9GBLc8x_N-6vxetVGIaqxdo10fi2sb2n3rDI7S9CT2Ma69jXHajgJhkpo8reF9QaP_SXspKoNH4A-BnZT3Yq0dmiua6aIUxXGZHjgdduPH09Wvzn-Ev1-TswYL_zaLirLljS101PIUVcmbSvbJVTIQJRo2uLLVN7al_dbjyIfynlUb3RhKWVg4q7S4wb3p9wvs56',
-    phone: '+559100000002',
+    description: 'Em nossa loja você encontra os melhores produtos nos setores de móveis e eletrodomésticos. Nossas formas de pagamento são facilitadas para você cliente em até 10X sem juros no crediário próprio da loja e até 12X sem juros nos cartões externos. A loja está localizada na Avenida Presidente Vargas, bairro Centro, ao lado do Supermercado Barrigão.',
+    logoUrl: 'logo_eletrocity.jpeg',
+    phone: '+5591991731262',
     links: {
-      website: '#',
-      extraAction: 'rocket_launch'
+      // website: '#',
+      instagram: 'eletrocityconcordia',
+      extraAction: 'instagram'
     }
   },
   {
-    id: 'restaurante-bom-sabor',
-    name: 'Restaurante Bom Sabor',
+    id: 'o-rei-da-pizza',
+    name: 'O Rei da Pizza',
     category: 'Alimentação',
     categoryKey: 'alimentacao',
-    description: 'Especialista em culinária regional com pratos autênticos e receitas tradicionais. Oferecemos um ambiente aconchegante e atendimento de qualidade para famílias.',
-    logoUrl: '',
-    phone: '+5591999990001',
+    description: 'A primeira pizza individual de Concórdia.',
+    logoUrl: 'logo_oreidapizza.png',
+    phone: '+5591991019653',
     links: {
-      website: 'http://www.restaurantebomsabor.com.br',
-      instagram: '@restaurantebomsabor',
-      facebook: 'restaurantebomsabor'
+      instagram: '@oreidapizza2026',
+      extraAction: 'instagram'
     }
   },
   {
-    id: 'studio-beleza-premium',
-    name: 'Studio Beleza Premium',
-    category: 'Saúde e Bem-estar',
-    categoryKey: 'saude_bem_estar',
-    description: 'Há 10 anos transformando e embelezando clientes com tratamentos inovadores, produtos de alta qualidade e profissionais dedicados a cuidar de você.',
-    logoUrl: '',
-    phone: '+5591999990002',
-    links: {
-      website: 'http://www.studiobeleza.com.br',
-      instagram: '@studiobelezapremium',
-      facebook: 'studiobeleza'
-    },
-    notes: 'Localização: Centro da cidade'
-  },
-  {
-    id: 'artesanato-da-comunidade',
-    name: 'Artesanato da Comunidade',
-    category: 'Artesanato e Cultura',
-    categoryKey: 'artesanato_cultura',
-    description: 'Produtos artesanais únicos confeccionados com criatividade e dedicação: crochê, tecelagem, pintura e muito mais, refletindo nossa cultura local.',
-    logoUrl: '',
-    phone: '+5591999990003',
-    links: {
-      instagram: '@artesanatocomunidade',
-      facebook: 'artesanato',
-      email: 'email@empresa.com.br'
-    },
-    notes: 'Aceita encomendas'
-  },
-  {
-    id: 'pneus-servicos-automotivos',
-    name: 'Pneus & Serviços Automotivos',
-    category: 'Construção, Pneus e Motos',
-    categoryKey: 'construcao_pneus_motos',
-    description: 'Empresa especializada em pneus das melhores marcas e manutenção automotiva completa, balanceamento, alinhamento e reparos rápidos com garantia.',
-    logoUrl: '',
-    phone: '+5591999990004',
-    links: {
-      website: 'http://www.pneusservicos.com.br',
-      instagram: '@pneusservicos',
-      facebook: 'pneusservicos'
-    },
-    notes: 'Possui estacionamento'
-  },
-  {
-    id: 'sitio-produtor-rural',
-    name: 'Sítio Produtor Rural',
+    id: 'agrifpa',
+    name: 'Associação de Aricultores Familiares Pérolas do Abacaxi',
     category: 'Agricultura Familiar',
     categoryKey: 'agricultura',
-    description: 'Agricultura familiar sustentável trazendo hortifrúti frescos, verduras, frutas, produtos naturais e artesanais direto da roça para sua mesa sem agrotóxicos.',
-    logoUrl: '',
-    phone: '+5591999990005',
+    description: 'O abacaxi pérola é um espetáculo natural de qualidade e sabor que a natureza desenhou.',
+    logoUrl: 'logo_agrifpa.png',
+    phone: '+5591991152713',
     links: {
-      instagram: '@sitio-produtor',
-      facebook: 'sitioprodutor'
-    },
-    notes: 'Produtos orgânicos e certificados'
+      website: 'https://www.facebook.com/share/g/1JFmuUuwFP/',
+      instagram: '@perolas_do_abacaxi',
+      extraAction: 'instagram'
+    }
   },
   {
-    id: 'moda-confeccoes-express',
-    name: 'Moda & Confecções Express',
+    id: 'centro-de-pesquisa-cravo-canela',
+    name: 'Centro de Pesquisa Cravo & Canela - CENPECC',
+    category: 'Artesanato e Cultura',
+    categoryKey: 'artesanato_cultura',
+    description: 'Ponto de Cultura Concordiense: Guardião de Acervos Cultufais.',
+    logoUrl: 'logo_cenpecc.jpg',
+    phone: '+5591993195245',
+    links: {
+      // website: 'http://www.studiobeleza.com.br',
+      instagram: '@dom_paiva75',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'zafira',
+    name: 'Zafira',
     category: 'Moda e Confecção',
     categoryKey: 'moda_confeccao',
-    description: 'As tendências mais atuais de roupas e confecções com preços acessíveis. Atendemos moda casual e peças sob encomenda para eventos.',
-    logoUrl: '',
-    phone: '+5591999990006',
+    description: 'Luxo acessível para mulheres reais.',
+    logoUrl: 'logo_zafira.jpg',
+    phone: '+5591991541001',
     links: {
-      website: 'http://www.modaconfeccoes.com.br',
-      instagram: '@modaconfeccoes',
-      facebook: 'modaconfeccoes'
+      instagram: '@zafirasj',
+      extraAction: 'instagram'
     },
-    notes: 'Desconto especial no evento'
   },
   {
-    id: 'hotel-fazenda-paraiso',
-    name: 'Hotel Fazenda Paraíso',
-    category: 'Hotelaria e Turismo',
-    categoryKey: 'hotelaria_turismo',
-    description: 'Hospedagem aconchegante em meio à natureza com culinária típica, passeios a cavalo, trilhas ecológicas e lazer completo para toda a família.',
-    logoUrl: '',
-    phone: '+5591999990007',
+    id: 'cantinho-das-marias',
+    name: 'Cantinho das Marias',
+    category: 'Alimentação',
+    categoryKey: 'alimentacao',
+    description: 'Bolos de macaxeira e pudim.',
+    logoUrl: 'logo_cantinhodasmarias.jpg',
+    phone: '+5591988528613',
     links: {
-      website: 'http://www.hotelfazendaparaiso.com.br',
-      instagram: '@hotelfazendaparaiso',
-      extraAction: 'info'
-    },
-    notes: 'Reservas antecipadas com desconto'
+      instagram: '@cantinhodasmaria91',
+      extraAction: 'instagram'
+    }
   },
   {
-    id: 'brink-mais',
-    name: 'Brink Mais Recreação',
-    category: 'Recreação Infantil',
-    categoryKey: 'recreacao_infantil',
-    description: 'Espaço de lazer e recreação infantil com brinquedos infláveis, oficinas criativas e monitores treinados para garantir a diversão segura das crianças.',
-    logoUrl: '',
-    phone: '+5591999990008',
+    id: 'realme-pay',
+    name: 'Realme Pay',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'A Realme Pay é uma operação oficial da marca Realme, levando ao público smartphones que combinam inovação, resistência e preço justo. Com condições de compra acessíveis, nossa missão é democratizar o acesso à tecnologia de qualidade.',
+    logoUrl: 'logo_realmepay.png',
+    phone: '+5591991953963',
     links: {
-      instagram: '@brinkmaisrecreacao',
-      extraAction: 'share'
+      instagram: '@_realmepay',
+      extraAction: 'instagram'
     },
-    notes: 'Área coberta com recreadores'
+  },
+  {
+    id: 'elly-silva-moda-feminina',
+    name: 'Elly Silva',
+    category: 'Moda e Confecção',
+    categoryKey: 'moda_confeccao',
+    description: 'Vestindo mulheres incríveis.',
+    logoUrl: 'logo_ellysilva.jpg',
+    phone: '+5591993124527',
+    links: {
+      // site: 'http://www.studiobeleza.com.br',
+      instagram: '@ellysilvamodafeminina',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'banco-do-brasil',
+    name: 'Banco do Brasil',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'O Banco do Brasil atua no mercado financeiro oferecendo diversos serviços, como empréstimos, investimentos, consórcios, cartões e seguros. Além disso, oferece soluções para pessoas físicas, empresas e agronegócio.',
+    logoUrl: 'logo_bancodobrasil.jpeg',
+    phone: '+5591991128848',
+    links: {
+      website: 'https://www.bb.com.br/site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAS47QRwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9z3EWPaFR6Y1nuO8wkBVEIKFBmSFlkyAxccvnYxwAefVgvV466_jBprC1wQ_aem_WBst3VHDBgUrymsDg6thGQ',
+    }
+  },
+  {
+    id: 'soldier',
+    name: 'Soldier Rastreamento Veicular',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'Serviço de rastreamento veicular com acesso ao Aplicativo no celular do cliente, bloqueio do veículo (em casos de furto ou roubo), verificação de rotas percorridas, controle de velocidade, etc.',
+    logoUrl: 'logo_soldier.jpg',
+    phone: '+5591991128848',
+    links: {
+      // website: 'http://www.hotelfazendaparaiso.com.br',
+      instagram: '@soldier.rastreamento',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'sortidos-concordia',
+    name: 'Sortidos Concórdia',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'Comércio Varejista de Artigo de Armarinho e Variedades em Geral.',
+    logoUrl: 'logo_sortidoscorcordia.jpeg',
+    phone: '#',
+    links: {
+      instagram: '@sortidosconcordia',
+      extraAction: 'instagram'
+    }
+  },
+  {
+    id: 'snackpoint',
+    name: 'Snack Point',
+    category: 'Alimentação',
+    categoryKey: 'alimentacao',
+    description: 'Experiência gastronômica que vai além do sabor.',
+    logoUrl: 'logo_sanckpoint.jpg',
+    phone: '+5591992074951',
+    links: {
+      instagram: '@snackpointconcordia',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'clinicayoshioka',
+    name: 'Clínica Yoshioka',
+    category: 'Saúde e Bem-estar',
+    categoryKey: 'saude_bem_estar',
+    description: 'Atuando com o compromisso de levar saúde, respeito e responsabilidade a toda a família, a Clínica Yoshioka destaca-se pelo atendimento humanizado e de alta confiabilidade. Contamos com um corpo clínico multidisciplinar que engloba especialidades como Clínica Geral, Ginecologia, Cardiologia, Nutrição e Psicologia. Oferecemos uma infraestrutura completa para a realização de exames laboratoriais de rotina, exames ginecológicos preventivos, avaliações cardiológicas avançadas e ultrassonografias em geral. Unimos tecnologia de ponta, agilidade nos resultados e sigilo absoluto para garantir a melhor experiência em cuidado e bem-estar para você.',
+    logoUrl: 'logo_clinicayoshioka.png',
+    phone: '+5591993742974',
+    links: {
+      website: 'http://clinicayoshioka.com.br/',
+      instagram: '@clinica_yoshioka',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'oticas-taylon',
+    name: 'Óticas Taylon',
+    category: 'Saúde e Bem-estar',
+    categoryKey: 'saude_bem_estar',
+    description: 'Nas Óticas Taylon, cuidar da sua visão é a nossa prioridade. Trabalhamos com óculos de grau, óculos de sol e lentes de contato, oferecendo produtos de qualidade, atendimento personalizado e as melhores opções para todos os estilos e necessidades. Nossa missão é proporcionar conforto, confiança e uma visão mais nítida, unindo tecnologia, variedade e preços acessíveis para que cada cliente encontre a solução ideal para enxergar e viver melhor.',
+    logoUrl: 'logo_oticastaylon.jpg',
+    phone: '+5591992332482',
+    links: {
+      instagram: '@oticastaylon',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'ritmofm',
+    name: 'Ritmo Fm 90,3',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'Ritmo Fm 90,3 a Rádio que sintoniza você',
+    logoUrl: 'logo_ritmofm.jpeg',
+    phone: '+5591991814241',
+    links: {
+      instagram: '@ritmofm90.3',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'podcast-do-lico',
+    name: 'Podcast do Lico',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'Podcast do Lico. O Canal de informações e Entretenimento do Vale do Acará.',
+    logoUrl: 'logo_podcastdolico.jpeg',
+    phone: '+5591991814241',
+    links: {
+      instagram: '@podcastdolico',
+      extraAction: 'instagram'
+    },
   }
 ];
