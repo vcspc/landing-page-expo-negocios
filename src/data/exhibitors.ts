@@ -50,6 +50,19 @@ export const EXHIBITORS: Exhibitor[] = [
     }
   },
   {
+    id: 'matsumura',
+    name: 'Matsumura',
+    category: 'Moda e Confecção',
+    categoryKey: 'moda_confeccao',
+    description: 'Moda e Estilo que elevam sua Autoestima.',
+    logoUrl: 'logo_matsumura.jpg',
+    phone: '+559191716625',
+    links: {
+      instagram: '@matsumura_ofc',
+      extraAction: 'instagram'
+    },
+  },
+  {
     id: 'eletrocity',
     name: 'Eletrocity',
     category: 'Serviços e Tecnologia',
