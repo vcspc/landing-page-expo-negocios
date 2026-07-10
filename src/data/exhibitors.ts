@@ -314,4 +314,30 @@ export const EXHIBITORS: Exhibitor[] = [
       extraAction: 'instagram'
     },
   },
+  {
+    id: 'farmacia-do-trabalhador',
+    name: 'Farmácia do Trabalhador',
+    category: 'Saúde e Bem-estar',
+    categoryKey: 'saude_bem_estar',
+    description: 'A Farmácia do Trabalhador tem como missão promover a saúde e o bem-estar da população, oferecendo atendimento humanizado, produtos de qualidade e serviços farmacêuticos com responsabilidade e dedicação. Trabalhamos com medicamentos de referência, genéricos e similares, além de uma ampla variedade de produtos de higiene, beleza e cuidados pessoais. Nossa equipe está preparada para orientar e acolher cada cliente com atenção, ética e profissionalismo, buscando oferecer confiança, segurança e excelência em todos os atendimentos, contribuindo para uma melhor qualidade de vida da população. Ficamos  localizados na avenida marechal Deodoro da Fonseca, centro.',
+    logoUrl: 'logo_farmaciadotrabalhador.jpg',
+    phone: '+5591991253926',
+    links: {
+      instagram: '@farmaciadotrabalhador1049',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'gbperfumes',
+    name: 'GBM Perfumes',
+    category: 'Moda e Confecção',
+    categoryKey: 'moda_confeccao',
+    description: 'Perfumes importados com preços acessíveis.',
+    logoUrl: 'logo_gbmperfumes.jpg',
+    phone: '#',
+    links: {
+      instagram: '@gbmperfumes',
+      extraAction: 'instagram'
+    },
+  },
 ];
