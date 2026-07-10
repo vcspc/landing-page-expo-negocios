@@ -340,4 +340,83 @@ export const EXHIBITORS: Exhibitor[] = [
       extraAction: 'instagram'
     },
   },
+  {
+    id: 'dianasilva',
+    name: 'DIANA SILVA ARTIGOS PARA PRESENTES',
+    category: 'Moda e Confecção',
+    categoryKey: 'moda_confeccao',
+    description: 'Temos o presente certo para surpreender quem você ama.',
+    logoUrl: 'logo_diana.jpg',
+    phone: '+5591993498125',
+    links: {
+      instagram: '@mdiana.silva',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'gazin',
+    name: 'Gazin',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'O melhor custo benefício do Brasil em eletrodomésticos, móveis, eletrônicos e muito mais.',
+    logoUrl: 'logo_gazin.jpg',
+    phone: '#',
+    links: {
+      website: 'https://www.falecomvendedorgazin.com.br/vendedores?city=Conc%C3%B3rdia+do+Par%C3%A1-PA&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnuWvqzsZON5c2TxOJ9YHsyPo3igcjDOOY-ECArBxVSzXw65q_TJYJCMLArTY_aem_6fX4FJtoEVFAcy8XYfu9eQ&utm_source=ig&utm_medium=social&utm_content=link_in_bio',
+      instagram: '@gazinconcordia',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'postomed',
+    name: 'Posto Medeiros',
+    category: 'Serviços e Tecnologia',
+    categoryKey: 'servicos_tecnologia',
+    description: 'Vai abastecer? Aproveite e tome um café em nossa conveniência Br mania.',
+    logoUrl: 'logo_postomedeiros.jpg',
+    phone: '#',
+    links: {
+      instagram: '@postomedeiros',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'doce-apimentada',
+    name: '𝐷𝑜𝑐𝑒 𝐴𝑝𝑖𝑚𝑒𝑛𝑡𝑎𝑑𝑎',
+    category: 'Moda e Confecção',
+    categoryKey: 'moda_confeccao',
+    description: 'Aqui tem 𝐴𝑀𝑂𝑅 e 𝑁𝑂𝑉𝐼𝐷𝐴𝐷𝐸𝑆. Tudo que você precisɑ em um só lugɑr!.',
+    logoUrl: 'logo_doceapimentada.jpg',
+    phone: '+5591993076585',
+    links: {
+      instagram: '@doce_apimentada',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'sitio-dantash',
+    name: 'Sitio Dantash',
+    category: 'Agricultura Familiar',
+    categoryKey: 'agricultura',
+    description: 'Agricultura Paraense - Concórdia do Pará/ Brasil Açaí - Cacau - Cupuaçu - Pimenta-do-Reino.',
+    logoUrl: 'logo_sitiodantash.jpg',
+    phone: '#',
+    links: {
+      instagram: '@sitiodantash',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'viviane-correia',
+    name: 'Viviane Correia Harmonização Facial',
+    category: 'Saúde e Bem-estar',
+    categoryKey: 'saude_bem_estar',
+    description: 'Estética com propósito.',
+    logoUrl: 'logo_viviane.jpg',
+    phone: '+5591991834241',
+    links: {
+      instagram: '@draviviany.correia',
+      extraAction: 'instagram'
+    },
+  },
 ];
