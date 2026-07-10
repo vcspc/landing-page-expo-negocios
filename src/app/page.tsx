@@ -5,6 +5,7 @@ import Bingo from "@/components/Bingo";
 import ExhibitorsSection from "@/components/ExhibitorsSection";
 import OrganizersSection from "@/components/OrganizersSection";
 import LocationSection from "@/components/LocationSection";
+import DateTimeSection from "@/components/DateTimeSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -14,11 +15,12 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <LocationSection />
+        <DateTimeSection />
         {/* <EventDetails /> */}
         <Bingo />
-        <OrganizersSection />
         <ExhibitorsSection />
+        <LocationSection />
+        <OrganizersSection />
         {/* <CTA /> */}
       </main>
       <Footer />

@@ -49,25 +49,24 @@ export default function Header() {
             Prêmios
           </a>
           <a
-            className="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200"
-            href="#parceiros"
-          >
-            Parceiros
-          </a>
-          <a
             className="font-title-md text-title-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200"
             href="#exhibitors"
           >
             Expositores
           </a>
-          {/* <a
+          <a
             className="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200"
             href="#location"
           >
             Localização
-          </a> */}
+          </a>
+          <a
+            className="font-title-md text-title-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="#parceiros"
+          >
+            Parceiros
+          </a>
         </nav>
-
         {/* Action Button & Hamburger Toggle */}
         <div className="flex items-center gap-4 md:gap-6">
           <button
