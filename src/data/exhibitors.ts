@@ -274,5 +274,44 @@ export const EXHIBITORS: Exhibitor[] = [
       instagram: '@gbsnet',
       extraAction: 'instagram'
     },
-  }
+  },
+  {
+    id: 'tete-cosmeticos',
+    name: 'Têtê Cosméticos',
+    category: 'Moda e Confecção',
+    categoryKey: 'moda_confeccao',
+    description: 'Sua nova loja de Cosméticos preferida!',
+    logoUrl: 'logo_tetecosmeticos.jpeg',
+    phone: '+5591993154537',
+    links: {
+      instagram: '@tetecosmeticos.para',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'cidade-mais-comercio',
+    name: 'Cidade Mais Comercio',
+    category: 'Construção, Pneus e Motos',
+    categoryKey: 'construcao_pneus_motos',
+    description: 'Atuamos na Área de Materiais de Construção.',
+    logoUrl: 'logo_cidademais.jpg',
+    phone: '+5591992907772',
+    links: {
+      instagram: '@cidademais_concordia',
+      extraAction: 'instagram'
+    },
+  },
+  {
+    id: 'casa-suzuki',
+    name: 'Casa Suzuki',
+    category: 'Agricultura Familiar',
+    categoryKey: 'agricultura',
+    description: 'Raízes Nipo-amazônicas, Resiliência e Sustentabilidade.',
+    logoUrl: 'logo_casasuzuki.png',
+    phone: '#',
+    links: {
+      instagram: '@casa.suzuki_',
+      extraAction: 'instagram'
+    },
+  },
 ];
